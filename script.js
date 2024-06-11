@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             setupSearch(data);
+            // Store the use cases globally so that they can be accessed in the search button click event
+            window.useCases = data;
         })
         .catch(error => console.error('Error loading use cases:', error));
 });
@@ -12,6 +14,10 @@ function setupSearch(useCases) {
         if (e.key === 'Enter') {
             searchUseCases(useCases);
         }
+    });
+
+    document.querySelector('.search-section button').addEventListener('click', function () {
+        searchUseCases(useCases);
     });
 }
 
@@ -51,7 +57,3 @@ function displayResults(results) {
         resultsContainer.appendChild(useCaseElement);
     });
 }
-
-document.querySelector('.search-section button').addEventListener('click', function () {
-    searchUseCases(useCases);
-});
