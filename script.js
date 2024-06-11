@@ -162,7 +162,7 @@ const useCases = [
         benefits: 'Improves visual quality and player immersion.',
         challenges: 'Ensuring smooth performance and high-quality rendering.',
         implementationTips: 'Use machine learning models to enhance animations, textures, and graphics in real-time based on player interactions and game context.',
-        additionalInfo: 'Real-time animation and graphics enhancement involve using AI to improve the visual quality of games dynamically. Machine learning models can enhance animations, textures, and graphics based on player interactions and game context, providing a more immersive and visually appealing experience.
+        additionalInfo: 'Real-time animation and graphics enhancement involve using AI to improve the visual quality of games dynamically. Machine learning models can enhance animations, textures, and graphics based on player interactions and game context, providing a more immersive and visually appealing experience.'
     },
             
     {
@@ -325,7 +325,7 @@ const useCases = [
         benefits: 'Increases recycling rates and reduces landfill waste.',
         challenges: 'Handling diverse waste materials and ensuring accurate sorting.',
         implementationTips: 'Use computer vision and machine learning models to identify and sort different types of waste materials on sorting lines.',
-        additionalInfo: 'Automated waste sorting involves using AI to identify and sort different types of waste materials for recycling and disposal. Computer vision and machine learning models can analyze waste on sorting lines, distinguishing between various materials such as plastics, metals, and organic waste. For example, AI can control robotic arms to separate recyclable materials from non-recyclable waste, ensuring efficient sorting. Implementing AI for waste sorting requires handling diverse waste materials and ensuring accurate identification and sorting processes. By increasing recycling rates and reducing landfill waste, AI-powered sorting systems can contribute to more sustainable waste management practices. 
+        additionalInfo: 'Automated waste sorting involves using AI to identify and sort different types of waste materials for recycling and disposal. Computer vision and machine learning models can analyze waste on sorting lines, distinguishing between various materials such as plastics, metals, and organic waste. For example, AI can control robotic arms to separate recyclable materials from non-recyclable waste, ensuring efficient sorting. Implementing AI for waste sorting requires handling diverse waste materials and ensuring accurate identification and sorting processes. By increasing recycling rates and reducing landfill waste, AI-powered sorting systems can contribute to more sustainable waste management practices.'
     },
             
    {
@@ -407,7 +407,7 @@ const useCases = [
         benefits: 'Enhances player performance and reduces injury risk.',
         challenges: 'Handling diverse performance data and ensuring personalized recommendations.',
         implementationTips: 'Use machine learning models to analyze performance metrics, such as speed, strength, and agility, to optimize training programs and prevent injuries.',
-        additionalInfo: 'Player performance analysis involves using AI to evaluate athlete performance metrics and optimize training programs. Machine learning models can process data from wearable devices, video footage, and performance tests to assess various aspects of athletic performance, such as speed, strength, and agility. For example, AI can recommend specific training exercises to improve a soccer player’s agility or suggest recovery protocols to prevent overuse injuries. Implementing AI for performance analysis requires handling diverse data sources and providing personalized training recommendations. By enhancing player performance and reducing injury risk, AI can help athletes reach their full potential and extend their careers. 
+        additionalInfo: 'Player performance analysis involves using AI to evaluate athlete performance metrics and optimize training programs. Machine learning models can process data from wearable devices, video footage, and performance tests to assess various aspects of athletic performance, such as speed, strength, and agility. For example, AI can recommend specific training exercises to improve a soccer player’s agility or suggest recovery protocols to prevent overuse injuries. Implementing AI for performance analysis requires handling diverse data sources and providing personalized training recommendations. By enhancing player performance and reducing injury risk, AI can help athletes reach their full potential and extend their careers.'
 },
     {
         industry: 'Culinary Arts',
@@ -488,7 +488,7 @@ const useCases = [
         benefits: 'Enhances pet care and supports early diagnosis of health problems.',
         challenges: 'Handling diverse species and ensuring accurate diagnostics.',
         implementationTips: 'Use machine learning models to analyze health data from wearable devices, veterinary records, and owner reports to monitor pet health and diagnose issues.',
-        additionalInfo: 'Pet health monitoring and diagnostics involve using AI to analyze data from wearable devices, veterinary records, and owner reports to monitor pet health and diagnose potential issues. Machine learning models can detect signs of illness or abnormal behavior, providing early warnings and recommendations for veterinary care. For example, AI can monitor a pet’s activity levels and identify changes that may indicate health problems such as arthritis or heart disease. 
+        additionalInfo: 'Pet health monitoring and diagnostics involve using AI to analyze data from wearable devices, veterinary records, and owner reports to monitor pet health and diagnose potential issues. Machine learning models can detect signs of illness or abnormal behavior, providing early warnings and recommendations for veterinary care. For example, AI can monitor a pet’s activity levels and identify changes that may indicate health problems such as arthritis or heart disease.'
 },
     {
         industry: 'Healthcare',
