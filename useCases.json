@@ -16,7 +16,7 @@
         "benefits": "Reduces financial losses and increases security.",
         "challenges": "High false-positive rates and need for real-time processing.",
         "implementationTips": "Continuously update models with new data and ensure robust testing.",
-        "additionalInfo": "Financial institutions have increasingly turned to AI to enhance their fraud detection capabilities. For instance, machine learning models can analyze vast amounts of transaction data in real-time to spot unusual patterns indicative of fraud. These systems use a variety of techniques, including anomaly detection, neural networks, and clustering algorithms, to identify potentially fraudulent activities. One key advantage of AI in this context is its ability to learn and adapt over time, improving its accuracy as more data is processed. In addition to detecting fraud, AI can also be used to prevent it by flagging suspicious activities before they result in significant financial losses. For example, credit card companies can use AI to monitor transactions and immediately alert customers to potential fraud, allowing for rapid response and mitigation." 
+        "additionalInfo": "Financial institutions have increasingly turned to AI to enhance their fraud detection capabilities. For instance, machine learning models can analyze vast amounts of transaction data in real-time to spot unusual patterns indicative of fraud. These systems use a variety of techniques, including anomaly detection, neural networks, and clustering algorithms, to identify potentially fraudulent activities. One key advantage of AI in this context is its ability to learn and adapt over time, improving its accuracy as more data is processed. In addition to detecting fraud, AI can also be used to prevent it by flagging suspicious activities before they result in significant financial losses. For example, credit card companies can use AI to monitor transactions and immediately alert customers to potential fraud, allowing for rapid response and mitigation."
     },
     {
         "industry": "Retail",
@@ -1847,7 +1847,7 @@
         "title": "Telepresence Robots",
         "description": "AI to enable telepresence robots to facilitate remote consultations and interactions.",
         "benefits": "Improves access to healthcare and supports remote work.",
-        "challenges": "Ensuring seamless communication and high-quality interactions.",8px
+        "challenges": "Ensuring seamless communication and high-quality interactions.",
         "implementationTips": "Use machine learning models to program telepresence robots for tasks such as navigating environments, facilitating video calls, and interacting with patients or clients.",
         "additionalInfo": "Telepresence robots involve using AI to enable robots to facilitate remote consultations and interactions in healthcare and other industries. Machine learning models can program telepresence robots to navigate environments, facilitate video calls, and interact with patients or clients. For example, AI can control a telepresence robot to move around a hospital, allowing a remote doctor to interact with patients and staff. Implementing AI for telepresence robots requires ensuring seamless communication and high-quality interactions."
 
