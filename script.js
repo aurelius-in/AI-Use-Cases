@@ -2304,7 +2304,7 @@ const useCases = [
         benefits: 'Reduces financial losses and increases security.',
         challenges: 'High false-positive rates and need for real-time processing.',
         implementationTips: 'Continuously update models with new data and ensure robust testing.'
-    },
+    }
 ];
 
 function searchUseCases() {
