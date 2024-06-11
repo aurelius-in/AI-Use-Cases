@@ -29,7 +29,7 @@ body {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 1cm; /* Adjust this to move the search bar closer to the top */
+    top: 1.5cm; /* Adjust this to move the search bar closer to the top */
     width: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.5);
