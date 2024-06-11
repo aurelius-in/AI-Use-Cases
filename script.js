@@ -19,6 +19,11 @@ function setupSearch(useCases) {
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
 
+    if (!searchInput || !searchButton) {
+        console.error('Search input or button not found in the DOM');
+        return;
+    }
+
     searchInput.addEventListener('input', debounce(() => searchUseCases(useCases), 300));
     searchButton.addEventListener('click', function () {
         searchUseCases(useCases);
