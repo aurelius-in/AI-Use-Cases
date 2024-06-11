@@ -51,3 +51,7 @@ function displayResults(results) {
         resultsContainer.appendChild(useCaseElement);
     });
 }
+
+document.querySelector('.search-section button').addEventListener('click', function () {
+    searchUseCases(useCases);
+});
