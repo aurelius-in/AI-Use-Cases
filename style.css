@@ -29,9 +29,9 @@ body {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 7em; /* Adjust this to move the search bar closer to the top */
+    top: 8em; /* Adjust this to move the search bar closer to the top */
     width: 100%;
-    z-inde: 1;
+    z-index: 1;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
 }
@@ -67,9 +67,9 @@ button:hover {
 }
 
 #results {
-    margin-top: calc(1cm + 70px); /* Adjust to account for the search section height */
+    margin-top: calc(8em + 50px); /* Adjust to account for the search section height */
     padding: 20px;
-    height: calc(100vh - (1cm + 70px) - 1cm); /* Leave 1cm at the bottom of the screen */
+    height: calc(100vh - (8em + 50px) - 1cm); /* Leave 1cm at the bottom of the screen */
     overflow-y: scroll;
     background: rgba(0, 0, 0, 0.5);
 }
