@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h1, input, button, div {
+body, input, button, div {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,24 +26,11 @@ body {
     position: relative;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #61dafb;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
 .search-section {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
     position: fixed;
-    top: calc(1in + 2.5em);
+    top: calc(1in + 1.5em); /* Adjust this to move the search bar higher */
     width: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.5);
@@ -81,9 +68,9 @@ button:hover {
 }
 
 #results {
-    margin-top: calc(1in + 2.5em + 70px); /* Adjust to account for the header and search section height */
+    margin-top: calc(1in + 1.5em + 70px); /* Adjust to account for the search section height */
     padding: 20px;
-    height: calc(100vh - (1in + 2.5em + 70px));
+    height: calc(100vh - (1in + 1.5em + 70px));
     overflow-y: scroll;
     background: rgba(0, 0, 0, 0.5);
 }
