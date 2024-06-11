@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Use Cases Search</title>
-    <style>
-        /* Add some basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        .use-case {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
+    <title>AI Use Case Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6bZdD1ILqczV/y5Q1X1g/7Ndr0MGeb+Hug/l7XrPq7QLo9RxF6kHD4Un5b2D4R9+EfoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>AI Use Cases Search</h1>
-    <input type="text" id="search-input" placeholder="Search for AI use cases...">
-    <div id="results"></div>
+    <div class="container">
+        <h1>AI Use Case Library</h1>
+        
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search use cases...">
+            <button onclick="searchUseCases()"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div id="results"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
