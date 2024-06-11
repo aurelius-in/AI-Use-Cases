@@ -1,37 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('useCases.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log('Use cases loaded:', data);
             setupSearch(data);
-            // Store the use cases globally so that they can be accessed in the search button click event
-            window.useCases = data;
+            // Initialize Fuse.js with options
+            window.fuse = new Fuse(data, {
+                keys: [
+                    'industry',
+                    'title',
+                    'description',
+                    'benefits',
+                    'challenges',
+                    'implementationTips',
+                    'additionalInfo'
+                ],
+                threshold: 0.3
+            });
         })
         .catch(error => console.error('Error loading use cases:', error));
 });
 
 function setupSearch(useCases) {
-    document.getElementById('search-input').addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            searchUseCases(useCases);
-        }
-    });
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.querySelector('.search-section button');
 
-    document.querySelector('.search-section button').addEventListener('click', function () {
-        searchUseCases(useCases);
+    searchInput.addEventListener('input', debounce(() => searchUseCases(), 300));
+    searchButton.addEventListener('click', function () {
+        searchUseCases();
     });
 }
 
-function searchUseCases(useCases) {
-    const query = document.getElementById('search-input').value.toLowerCase();
-    const results = useCases.filter(useCase =>
-        useCase.industry.toLowerCase().includes(query) ||
-        useCase.title.toLowerCase().includes(query) ||
-        useCase.description.toLowerCase().includes(query) ||
-        useCase.benefits.toLowerCase().includes(query) ||
-        useCase.challenges.toLowerCase().includes(query) ||
-        useCase.implementationTips.toLowerCase().includes(query) ||
-        useCase.additionalInfo.toLowerCase().includes(query)
-    );
+function debounce(func, wait) {
+    let timeout;
+    return function () {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
+
+function searchUseCases() {
+    const query = document.getElementById('search-input').value;
+    console.log('Search query:', query);
+    const results = window.fuse.search(query).map(result => result.item);
+    console.log('Search results:', results);
     displayResults(results);
 }
 
