@@ -40,8 +40,8 @@ h1 {
 }
 
 input[type="text"] {
-    width: 70%;
-    padding: 10px;
+    width: 35%; /* Reduced width to half of the original 70% */
+    padding: 20px; /* Increased height to twice of the original */
     border-radius: 8px;
     border: 1px solid #ccc;
     margin-right: 10px;
