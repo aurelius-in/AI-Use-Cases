@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
     fetch('useCases.json')
         .then(response => {
             if (!response.ok) {
@@ -9,30 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             console.log('Use cases loaded:', data);
             setupSearch(data);
-            // Initialize Fuse.js with options
-            window.fuse = new Fuse(data, {
-                keys: [
-                    'industry',
-                    'title',
-                    'description',
-                    'benefits',
-                    'challenges',
-                    'implementationTips',
-                    'additionalInfo'
-                ],
-                threshold: 0.3
-            });
+            window.useCases = data; // Store globally for button click access
         })
         .catch(error => console.error('Error loading use cases:', error));
 });
 
 function setupSearch(useCases) {
     const searchInput = document.getElementById('search-input');
-    const searchButton = document.querySelector('.search-section button');
+    const searchButton = document.getElementById('search-button');
 
-    searchInput.addEventListener('input', debounce(() => searchUseCases(), 300));
+    searchInput.addEventListener('input', debounce(() => searchUseCases(useCases), 300));
     searchButton.addEventListener('click', function () {
-        searchUseCases();
+        searchUseCases(useCases);
     });
 }
 
@@ -45,10 +34,18 @@ function debounce(func, wait) {
     };
 }
 
-function searchUseCases() {
-    const query = document.getElementById('search-input').value;
+function searchUseCases(useCases) {
+    const query = document.getElementById('search-input').value.toLowerCase();
     console.log('Search query:', query);
-    const results = window.fuse.search(query).map(result => result.item);
+    const results = useCases.filter(useCase =>
+        useCase.industry.toLowerCase().includes(query) ||
+        useCase.title.toLowerCase().includes(query) ||
+        useCase.description.toLowerCase().includes(query) ||
+        useCase.benefits.toLowerCase().includes(query) ||
+        useCase.challenges.toLowerCase().includes(query) ||
+        useCase.implementationTips.toLowerCase().includes(query) ||
+        useCase.additionalInfo.toLowerCase().includes(query)
+    );
     console.log('Search results:', results);
     displayResults(results);
 }
